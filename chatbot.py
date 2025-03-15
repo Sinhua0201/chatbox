@@ -22,7 +22,7 @@ class RAGChatbot:
         self.vector_db = FAISS.from_documents(chunks, embedding_model)
 
         # 5. 初始化 LLM
-        self.model = OllamaLLM(model="llama3.2:3b")
+        self.model = OllamaLLM(model="hf.co/bartowski/gemma-2-2b-it-GGUF:IQ4_XS")
 
         # 6. 创建 RAG 处理链
         retriever = self.vector_db.as_retriever()
