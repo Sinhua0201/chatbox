@@ -1,0 +1,102 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 聊天窗口 */
+.chat-container {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部样式 */
+header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 聊天框 */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* 用户消息 */
+.user-message {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: right;
+}
+
+/* AI 消息 */
+.bot-message {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: left;
+}
+
+/* 输入框和按钮 */
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #007bff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 480px) {
+    .chat-container {
+        width: 90%;
+        max-width: none;
+    }
+
+    .chat-box {
+        max-height: 250px;
+    }
+}
